@@ -1,0 +1,117 @@
+{
+  "barge-waterfront": {
+    "widths": [
+      480,
+      800,
+      1020
+    ],
+    "width": 1020,
+    "height": 765
+  },
+  "ceo-portrait": {
+    "widths": [
+      480,
+      800,
+      853
+    ],
+    "width": 853,
+    "height": 1280
+  },
+  "dismantling-site-1": {
+    "widths": [
+      480,
+      800,
+      1040
+    ],
+    "width": 1040,
+    "height": 552
+  },
+  "dismantling-site-2": {
+    "widths": [
+      480,
+      800,
+      1040
+    ],
+    "width": 1040,
+    "height": 552
+  },
+  "dismantling-site-3": {
+    "widths": [
+      480,
+      800,
+      1040
+    ],
+    "width": 1040,
+    "height": 780
+  },
+  "dismantling-site-4": {
+    "widths": [
+      480,
+      800,
+      1040
+    ],
+    "width": 1040,
+    "height": 780
+  },
+  "excavator-yard": {
+    "widths": [
+      480,
+      800,
+      1040
+    ],
+    "width": 1040,
+    "height": 780
+  },
+  "ship-dismantling-crane": {
+    "widths": [
+      480,
+      800,
+      1040
+    ],
+    "width": 1040,
+    "height": 780
+  },
+  "site-yard-containers": {
+    "widths": [
+      480,
+      800,
+      1020
+    ],
+    "width": 1020,
+    "height": 765
+  },
+  "vessel-hulk-jetty": {
+    "widths": [
+      480,
+      800,
+      1040
+    ],
+    "width": 1040,
+    "height": 780
+  },
+  "yacht-slipway-crane": {
+    "widths": [
+      480,
+      800,
+      1020
+    ],
+    "width": 1020,
+    "height": 765
+  },
+  "zoomlion-crane-1": {
+    "widths": [
+      480,
+      725
+    ],
+    "width": 725,
+    "height": 544
+  },
+  "zoomlion-crane-2": {
+    "widths": [
+      480,
+      713
+    ],
+    "width": 713,
+    "height": 535
+  }
+}
