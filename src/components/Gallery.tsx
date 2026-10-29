@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Maximize2 } from "lucide-react";
+import { Maximize2, Play } from "lucide-react";
 import type { GalleryItem } from "@/data/site";
 import { ResponsiveImage } from "./ResponsiveImage";
 import { Lightbox } from "./Lightbox";
@@ -27,7 +27,7 @@ export function Gallery({ items }: { items: GalleryItem[] }) {
                 type="button"
                 onClick={() => setActive(i)}
                 className="group relative block w-full overflow-hidden bg-navy text-left"
-                aria-label={`Open image: ${item.caption}`}
+                aria-label={`${item.video ? "Play video" : "Open image"}: ${item.caption}`}
               >
                 <ResponsiveImage
                   name={item.image}
@@ -39,9 +39,18 @@ export function Gallery({ items }: { items: GalleryItem[] }) {
                   <span className="eyebrow text-amber">{item.category}</span>
                   <span className="mt-1 font-display text-lg font-semibold text-white">{item.caption}</span>
                 </span>
-                <span aria-hidden="true" className="absolute top-4 right-4 grid size-10 place-items-center bg-amber text-navy opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-                  <Maximize2 className="size-4" />
-                </span>
+                {item.video ? (
+                  // Always visible so the tile reads as a video
+                  <span aria-hidden="true" className="absolute inset-0 grid place-items-center">
+                    <span className="grid size-16 place-items-center rounded-full bg-amber text-navy shadow-xl transition-transform duration-300 group-hover:scale-110">
+                      <Play className="ml-1 size-7 fill-current" />
+                    </span>
+                  </span>
+                ) : (
+                  <span aria-hidden="true" className="absolute top-4 right-4 grid size-10 place-items-center bg-amber text-navy opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+                    <Maximize2 className="size-4" />
+                  </span>
+                )}
               </button>
             </motion.li>
           ))}

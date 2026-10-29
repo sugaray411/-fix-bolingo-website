@@ -32,6 +32,7 @@ Source photos (extracted from the company profile PDF) are in `photos/`:
 | `barge-waterfront.jpg` | Jetty Space service, Contact hero |
 | `yacht-slipway-crane.jpg` | Vessel Repair service, How We Work |
 | `vessel-hulk-jetty.jpg` | Why Work With Us background, gallery |
+| `drone-video-frame.jpg` | Gallery thumbnail for the drone video |
 | `excavator-yard.jpg` | Gallery |
 | `site-yard-containers.jpg` | Gallery |
 | `dismantling-site-1..4.jpg` | Gallery |

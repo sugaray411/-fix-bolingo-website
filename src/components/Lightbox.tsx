@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import type { GalleryItem } from "@/data/site";
-import { ResponsiveImage } from "./ResponsiveImage";
+import { ResponsiveImage, imageSrc } from "./ResponsiveImage";
 
 type Props = {
   items: GalleryItem[];
@@ -32,6 +32,8 @@ export function Lightbox({ items, index, onClose, onIndexChange }: Props) {
     if (index === null) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
+      // Leave arrow keys to the video's own controls (seeking) when focused
+      else if (e.target instanceof HTMLVideoElement) return;
       else if (e.key === "ArrowRight") onIndexChange((index + 1) % items.length);
       else if (e.key === "ArrowLeft") onIndexChange((index - 1 + items.length) % items.length);
       else if (e.key === "Tab") {
@@ -64,7 +66,7 @@ export function Lightbox({ items, index, onClose, onIndexChange }: Props) {
           ref={dialogRef}
           role="dialog"
           aria-modal="true"
-          aria-label={`Image ${index + 1} of ${items.length}: ${item.caption}`}
+          aria-label={`${item.video ? "Video" : "Image"} ${index + 1} of ${items.length}: ${item.caption}`}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-navy-900/95 p-4 sm:p-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -85,7 +87,21 @@ export function Lightbox({ items, index, onClose, onIndexChange }: Props) {
             transition={{ duration: 0.3 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <ResponsiveImage name={item.image} alt={item.caption} sizes="(min-width: 1024px) 1024px, 100vw" priority className="max-h-[78vh] w-auto object-contain" />
+            {item.video ? (
+              <video
+                key={item.video}
+                className="max-h-[78vh] w-full bg-black"
+                src={`${import.meta.env.BASE_URL}${item.video}`}
+                poster={imageSrc(item.image, 1024)}
+                controls
+                autoPlay
+                muted
+                playsInline
+                aria-label={item.caption}
+              />
+            ) : (
+              <ResponsiveImage name={item.image} alt={item.caption} sizes="(min-width: 1024px) 1024px, 100vw" priority className="max-h-[78vh] w-auto object-contain" />
+            )}
             <figcaption className="mt-4 flex items-center justify-between gap-4 text-sm text-white/80">
               <span><span className="eyebrow mr-3 text-amber">{item.category}</span>{item.caption}</span>
               <span className="tabular-nums text-white/65">{index + 1} / {items.length}</span>

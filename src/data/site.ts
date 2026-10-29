@@ -274,13 +274,22 @@ export const galleryCategories = ["All", "Ship Scrapping", "Equipment", "Waterfr
 export type GalleryCategory = Exclude<(typeof galleryCategories)[number], "All">;
 
 export type GalleryItem = {
+  /** Thumbnail, or the poster frame when `video` is set */
   image: ImageKey;
   caption: string;
   category: GalleryCategory;
+  /** Optional video (path under public/), played in the lightbox */
+  video?: string;
 };
 
 export const gallery: GalleryItem[] = [
   // The first six also appear on the home page
+  {
+    image: "drone-video-frame",
+    video: "videos/hero-wreck-removal.mp4",
+    caption: "Drone footage of vessel removal at the breakwater",
+    category: "Ship Scrapping",
+  },
   { image: "wreck-removal-aerial", caption: "Aerial view of vessel removal at the breakwater", category: "Ship Scrapping" },
   { image: "scrap-loading-beach", caption: "Excavator loading recovered steel onto a haulage truck", category: "Equipment" },
   { image: "deck-cutting-crew", caption: "Cutting crew at work on the vessel deck", category: "Ship Scrapping" },
