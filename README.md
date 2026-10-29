@@ -34,7 +34,7 @@ Source photos (extracted from the company profile PDF) are in `photos/`:
 | `vessel-hulk-jetty.jpg` | Why Work With Us background, gallery |
 | `excavator-yard.jpg` | Gallery |
 | `site-yard-containers.jpg` | Gallery |
-| `dismantling-site-1..4.jpg` | Services/Projects heroes, Ship Scrapping & Marine Cutting services, gallery |
+| `dismantling-site-1..4.jpg` | Gallery |
 | `crane-lifting-deck.jpg` | Ship Scrapping service, gallery |
 | `deck-cutting-crew.jpg` | Marine Cutting service, gallery |
 | `breakwater-causeway.jpg` | Water Supply & General Contracting service, gallery |
