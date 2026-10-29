@@ -89,6 +89,16 @@
     "width": 1040,
     "height": 780
   },
+  "wreck-removal-aerial": {
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 900
+  },
   "yacht-slipway-crane": {
     "widths": [
       480,

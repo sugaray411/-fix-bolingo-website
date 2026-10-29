@@ -26,11 +26,12 @@ Source photos (extracted from the company profile PDF) are in `photos/`:
 
 | File | Used for |
 | --- | --- |
-| `ship-dismantling-crane.jpg` | Home hero, Leadership section |
+| `ship-dismantling-crane.jpg` | Leadership section, gallery |
+| `wreck-removal-aerial.jpg` | Wreckage Removal service, gallery, social-sharing image |
 | `zoomlion-crane-1.jpg`, `zoomlion-crane-2.jpg` | About preview, About hero, Heavy Equipment service |
 | `barge-waterfront.jpg` | Jetty Space service, Contact hero |
 | `yacht-slipway-crane.jpg` | Vessel Repair service, How We Work |
-| `vessel-hulk-jetty.jpg` | Why Work With Us background, Wreckage Removal service |
+| `vessel-hulk-jetty.jpg` | Why Work With Us background, gallery |
 | `excavator-yard.jpg` | Marine Scrap service, gallery |
 | `site-yard-containers.jpg` | Water Supply service, gallery |
 | `dismantling-site-1..4.jpg` | Services/Projects heroes, Ship Scrapping & Marine Cutting services, gallery |
@@ -41,6 +42,22 @@ To replace or add a photo, drop a `.jpg` into `photos/` and run
 `public/images/` and updates `src/data/image-meta.json`. If you change a
 page's hero image, update the matching entry in the preload script in
 `index.html`.
+
+## Hero video
+
+The home page opens on `public/videos/hero-wreck-removal.mp4` (aerial drone
+footage, muted and looping, about 2 MB) with `hero-poster.webp` as its first
+frame. Visitors who prefer reduced motion see only the poster, and the hero
+has a pause button. To swap the video:
+
+```bash
+ffmpeg -i new-clip.mp4 -an -c:v libx264 -preset veryslow -crf 31 \
+  -pix_fmt yuv420p -movflags +faststart public/videos/hero-wreck-removal.mp4
+ffmpeg -ss 0.2 -i public/videos/hero-wreck-removal.mp4 -frames:v 1 \
+  -c:v libwebp -quality 72 public/videos/hero-poster.webp
+```
+
+Update `heroVideo` in `src/data/site.ts` if you change the file names.
 
 ## Quote form
 

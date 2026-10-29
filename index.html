@@ -23,17 +23,24 @@
       (function () {
         // [image name, available widths] — must match src/data/image-meta.json
         var heroes = {
-          "/": ["ship-dismantling-crane", [480, 800, 1040]],
           "/about": ["zoomlion-crane-2", [480, 713]],
           "/services": ["dismantling-site-1", [480, 800, 1040]],
           "/projects": ["dismantling-site-3", [480, 800, 1040]],
           "/contact": ["barge-waterfront", [480, 800, 1020]]
         };
-        var hero = heroes[location.pathname.replace(/\/$/, "") || "/"];
+        var path = location.pathname.replace(/\/$/, "") || "/";
+        var l = document.createElement("link");
+        l.rel = "preload"; l.as = "image"; l.fetchPriority = "high";
+        if (path === "/") {
+          // Home opens on the hero video; preload its poster frame
+          l.href = "videos/hero-poster.webp";
+          document.head.appendChild(l);
+          return;
+        }
+        var hero = heroes[path];
         if (!hero) return;
         var name = hero[0], widths = hero[1];
-        var l = document.createElement("link");
-        l.rel = "preload"; l.as = "image"; l.type = "image/webp"; l.fetchPriority = "high";
+        l.type = "image/webp";
         l.href = "images/" + name + "-" + widths[widths.length - 1] + ".webp";
         l.imageSrcset = widths.map(function (w) { return "images/" + name + "-" + w + ".webp " + w + "w"; }).join(", ");
         l.imageSizes = "100vw";

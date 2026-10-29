@@ -1,10 +1,11 @@
-import { useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { about, company, gallery, process, services, stats, whyUs } from "@/data/site";
 import { buttonVariants } from "@/components/ui/button";
 import { ResponsiveImage } from "@/components/ResponsiveImage";
+import { HeroVideo, HeroVideoToggle } from "@/components/HeroVideo";
 import { Reveal } from "@/components/Reveal";
 import { Counter } from "@/components/Counter";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -19,21 +20,19 @@ function Hero() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const ease = [0.22, 1, 0.36, 1] as const;
+  const reduce = useReducedMotion();
+  const [playing, setPlaying] = useState(!reduce);
+  const onBlocked = useCallback(() => setPlaying(false), []);
 
   return (
     <section ref={ref} className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-navy pt-28 pb-40 sm:pb-48">
       <motion.div style={{ y }} className="absolute inset-0 -z-20 scale-110">
-        <ResponsiveImage
-          name="ship-dismantling-crane"
-          alt="Large vessel being dismantled at the Kirikiri waterfront with a crawler crane and work crew"
-          priority
-          intrinsic={false}
-          className="h-full w-full object-cover"
-        />
+        <HeroVideo playing={playing} onBlocked={onBlocked} />
       </motion.div>
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-navy via-navy/85 to-navy/30" />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-t from-navy via-transparent to-navy/40" />
-      <div aria-hidden="true" className="bg-grid-dark absolute inset-0 -z-10 opacity-50" />
+      {/* Lighter on wide screens so the footage reads; text keeps a dark band behind it */}
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/45 lg:from-navy/85 lg:via-navy/45 lg:to-transparent" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-t from-navy via-transparent to-navy/50" />
+      <div aria-hidden="true" className="bg-grid-dark absolute inset-0 -z-10 opacity-30" />
 
       <div className="container-x">
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease }} className="eyebrow flex items-center gap-3 text-amber">
@@ -59,6 +58,10 @@ function Hero() {
             Our Services
           </Link>
         </motion.div>
+      </div>
+
+      <div className="absolute right-5 bottom-32 sm:right-8 sm:bottom-40">
+        <HeroVideoToggle playing={playing} onToggle={() => setPlaying((p) => !p)} />
       </div>
 
       <a href="#stats" aria-label="Scroll to content" className="absolute bottom-32 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/70 transition-colors hover:text-white sm:bottom-40 md:flex">

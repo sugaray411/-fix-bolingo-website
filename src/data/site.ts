@@ -43,6 +43,11 @@ export const company = {
   addressShort: "Kirikiri Waterside, Apapa, Lagos",
   mapEmbed: "https://www.google.com/maps?q=Kirikiri%20Waterside%2C%20Apapa%2C%20Lagos%2C%20Nigeria&output=embed",
   mapLink: "https://www.google.com/maps/search/?api=1&query=Kirikiri+Waterside+Apapa+Lagos+Nigeria",
+  heroVideo: {
+    src: "videos/hero-wreck-removal.mp4",
+    poster: "videos/hero-poster.webp",
+    description: "Background video: aerial drone footage of a vessel being dismantled and removed beside a rock breakwater, with a crawler crane working from the shore.",
+  },
   ceo: { name: "Ms Anthonia Ugokwe", title: "MD/CEO", image: "ceo-portrait" as ImageKey },
   serviceNote:
     "Scope, equipment availability, approvals, timelines and commercial terms are confirmed before work begins.",
@@ -117,8 +122,8 @@ export const services: Service[] = [
     description:
       "Removal, recovery and clearance of wrecked or unwanted vessels and marine structures, subject to project scope and applicable approvals.",
     icon: LifeBuoy,
-    image: "vessel-hulk-jetty",
-    imageAlt: "Rusted vessel hulk moored beside barges at the jetty",
+    image: "wreck-removal-aerial",
+    imageAlt: "Aerial view of a vessel being dismantled beside a rock breakwater, with a crawler crane working from the shore",
   },
   {
     slug: "marine-cutting",
@@ -275,6 +280,7 @@ export type GalleryItem = {
 };
 
 export const gallery: GalleryItem[] = [
+  { image: "wreck-removal-aerial", caption: "Aerial view of vessel removal at the breakwater", category: "Ship Scrapping" },
   { image: "ship-dismantling-crane", caption: "Vessel dismantling with crawler-crane support", category: "Ship Scrapping" },
   { image: "zoomlion-crane-1", caption: "Zoomlion crawler crane and excavator on site", category: "Equipment" },
   { image: "dismantling-site-1", caption: "Dismantling yard, Kirikiri waterfront", category: "Ship Scrapping" },
