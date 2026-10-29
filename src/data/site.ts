@@ -111,8 +111,8 @@ export const services: Service[] = [
     description:
       "Dismantling and recovery of vessels and marine assets, with reusable scrap materials separated for onward use or recycling.",
     icon: Ship,
-    image: "dismantling-site-3",
-    imageAlt: "Vessel being dismantled at the Kirikiri waterfront with steel sections laid out on the yard",
+    image: "crane-lifting-deck",
+    imageAlt: "Crawler crane on the breakwater lifting cut sections from a vessel being dismantled",
   },
   {
     slug: "wreckage-removal",
@@ -133,8 +133,8 @@ export const services: Service[] = [
     description:
       "Cutting support for steel and vessel components, including Broco underwater cutting rods/equipment where suitable.",
     icon: Flame,
-    image: "dismantling-site-4",
-    imageAlt: "Workers cutting steel vessel sections on the dismantling yard",
+    image: "deck-cutting-crew",
+    imageAlt: "Cutting crew with gas cylinders and hoses working on a vessel deck",
   },
   {
     slug: "vessel-repair",
@@ -177,8 +177,8 @@ export const services: Service[] = [
     description:
       "Water supply, general contracting and allied services for marine, industrial and other clients.",
     icon: Droplets,
-    image: "site-yard-containers",
-    imageAlt: "Prepared site yard with containers and steel structures",
+    image: "breakwater-causeway",
+    imageAlt: "Aerial view of heavy haulage along a rock breakwater causeway",
   },
   {
     slug: "marine-scrap",
@@ -188,8 +188,8 @@ export const services: Service[] = [
     description:
       "Sourcing and supply of ship scrap and recoverable materials for industrial buyers, subject to specification and availability.",
     icon: Recycle,
-    image: "excavator-yard",
-    imageAlt: "Excavator handling recovered scrap materials in the yard",
+    image: "scrap-truck-loading",
+    imageAlt: "Excavator loading recovered steel scrap onto a haulage truck",
   },
 ];
 
@@ -280,7 +280,21 @@ export type GalleryItem = {
 };
 
 export const gallery: GalleryItem[] = [
+  // The first six also appear on the home page
   { image: "wreck-removal-aerial", caption: "Aerial view of vessel removal at the breakwater", category: "Ship Scrapping" },
+  { image: "scrap-loading-beach", caption: "Excavator loading recovered steel onto a haulage truck", category: "Equipment" },
+  { image: "deck-cutting-crew", caption: "Cutting crew at work on the vessel deck", category: "Ship Scrapping" },
+  { image: "vessel-superstructure-aerial", caption: "Aerial view of the vessel's superstructure and stern", category: "Ship Scrapping" },
+  { image: "crawler-crane-breakwater", caption: "Crawler crane on the breakwater supporting dismantling", category: "Equipment" },
+  { image: "breakwater-causeway", caption: "Heavy haulage along the breakwater causeway", category: "Waterfront & Jetty" },
+  { image: "crane-lifting-deck", caption: "Crane lifting cut sections from the vessel", category: "Ship Scrapping" },
+  { image: "scrap-truck-loading", caption: "Recovered scrap loaded for onward transport", category: "Equipment" },
+  { image: "vessel-stern-coastline", caption: "Vessel stern with the breakwater and coastline beyond", category: "Waterfront & Jetty" },
+  { image: "hull-breakwater-close", caption: "Partially dismantled hull alongside the rock breakwater", category: "Ship Scrapping" },
+  { image: "scrap-yard-excavator", caption: "Excavator beside a hull section filled with cut steel", category: "Equipment" },
+  { image: "wreck-aerial-side", caption: "Vessel alongside the breakwater during dismantling", category: "Ship Scrapping" },
+  { image: "scrap-haulage-seafront", caption: "Scrap haulage at the seafront work site", category: "Equipment" },
+  { image: "beach-site-wide", caption: "Shoreline work site with excavator, haulage truck and crew", category: "Waterfront & Jetty" },
   { image: "ship-dismantling-crane", caption: "Vessel dismantling with crawler-crane support", category: "Ship Scrapping" },
   { image: "zoomlion-crane-1", caption: "Zoomlion crawler crane and excavator on site", category: "Equipment" },
   { image: "dismantling-site-1", caption: "Dismantling yard, Kirikiri waterfront", category: "Ship Scrapping" },

@@ -8,7 +8,7 @@ import { Reveal } from "./Reveal";
 export function CtaBanner() {
   return (
     <section className="relative isolate overflow-hidden bg-navy py-20 sm:py-28">
-      <ResponsiveImage name="dismantling-site-1" alt="" sizes="100vw" intrinsic={false} className="absolute inset-0 -z-20 h-full w-full object-cover opacity-30" />
+      <ResponsiveImage name="scrap-haulage-seafront" alt="" sizes="100vw" intrinsic={false} className="absolute inset-0 -z-20 h-full w-full object-cover opacity-30" />
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-navy via-navy/95 to-teal/70" />
       <div aria-hidden="true" className="bg-steel absolute inset-0 -z-10" />
       <div className="container-x flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">

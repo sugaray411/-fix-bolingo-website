@@ -32,9 +32,17 @@ Source photos (extracted from the company profile PDF) are in `photos/`:
 | `barge-waterfront.jpg` | Jetty Space service, Contact hero |
 | `yacht-slipway-crane.jpg` | Vessel Repair service, How We Work |
 | `vessel-hulk-jetty.jpg` | Why Work With Us background, gallery |
-| `excavator-yard.jpg` | Marine Scrap service, gallery |
-| `site-yard-containers.jpg` | Water Supply service, gallery |
+| `excavator-yard.jpg` | Gallery |
+| `site-yard-containers.jpg` | Gallery |
 | `dismantling-site-1..4.jpg` | Services/Projects heroes, Ship Scrapping & Marine Cutting services, gallery |
+| `crane-lifting-deck.jpg` | Ship Scrapping service, gallery |
+| `deck-cutting-crew.jpg` | Marine Cutting service, gallery |
+| `breakwater-causeway.jpg` | Water Supply & General Contracting service, gallery |
+| `scrap-truck-loading.jpg` | Marine Scrap service, gallery |
+| `crawler-crane-breakwater.jpg` | Services page hero, gallery |
+| `vessel-stern-coastline.jpg` | Projects page hero, gallery |
+| `scrap-haulage-seafront.jpg` | "Let's discuss your next project" banner, gallery |
+| Other drone and site shots (`wreck-aerial-side`, `hull-breakwater-close`, `vessel-superstructure-aerial`, `scrap-loading-beach`, `scrap-yard-excavator`, `beach-site-wide`) | Gallery |
 | `ceo-portrait.jpg` | MD/CEO card |
 
 To replace or add a photo, drop a `.jpg` into `photos/` and run

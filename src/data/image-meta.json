@@ -8,6 +8,25 @@
     "width": 1020,
     "height": 765
   },
+  "beach-site-wide": {
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "breakwater-causeway": {
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "width": 960,
+    "height": 544
+  },
   "ceo-portrait": {
     "widths": [
       480,
@@ -16,6 +35,33 @@
     ],
     "width": 853,
     "height": 1280
+  },
+  "crane-lifting-deck": {
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "width": 960,
+    "height": 544
+  },
+  "crawler-crane-breakwater": {
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "width": 960,
+    "height": 544
+  },
+  "deck-cutting-crew": {
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "width": 960,
+    "height": 544
   },
   "dismantling-site-1": {
     "widths": [
@@ -62,6 +108,53 @@
     "width": 1040,
     "height": 780
   },
+  "hull-breakwater-close": {
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "width": 960,
+    "height": 544
+  },
+  "scrap-haulage-seafront": {
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "width": 960,
+    "height": 544
+  },
+  "scrap-loading-beach": {
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 900
+  },
+  "scrap-truck-loading": {
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "width": 960,
+    "height": 544
+  },
+  "scrap-yard-excavator": {
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 900
+  },
   "ship-dismantling-crane": {
     "widths": [
       480,
@@ -88,6 +181,33 @@
     ],
     "width": 1040,
     "height": 780
+  },
+  "vessel-stern-coastline": {
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "width": 960,
+    "height": 544
+  },
+  "vessel-superstructure-aerial": {
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "width": 960,
+    "height": 544
+  },
+  "wreck-aerial-side": {
+    "widths": [
+      480,
+      800,
+      960
+    ],
+    "width": 960,
+    "height": 544
   },
   "wreck-removal-aerial": {
     "widths": [

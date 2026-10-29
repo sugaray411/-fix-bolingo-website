@@ -19,8 +19,8 @@ export default function Projects() {
         title="Projects & Gallery"
         eyebrow="On site"
         intro="A look at our yard, equipment and waterfront operations at Kirikiri, Apapa."
-        image="dismantling-site-3"
-        imageAlt="Vessel dismantling operations on the waterfront"
+        image="vessel-stern-coastline"
+        imageAlt="Aerial view of a vessel stern near the breakwater, with the coastline beyond"
       />
       <section className="py-20 sm:py-28">
         <div className="container-x">

@@ -21,8 +21,8 @@ export default function Services() {
         title="Our Services"
         eyebrow="One maritime partner"
         intro="Eight core services for vessel owners, contractors, industrial buyers and project partners."
-        image="dismantling-site-1"
-        imageAlt="Vessel dismantling yard at the Kirikiri waterfront"
+        image="crawler-crane-breakwater"
+        imageAlt="Crawler crane on a rock breakwater beside a vessel being dismantled"
       />
 
       {/* Quick index */}
