@@ -28,11 +28,14 @@ Source photos (extracted from the company profile PDF) are in `photos/`:
 | --- | --- |
 | `ship-dismantling-crane.jpg` | Leadership section, gallery |
 | `wreck-removal-aerial.jpg` | Wreckage Removal service, gallery, social-sharing image |
-| `zoomlion-crane-1.jpg`, `zoomlion-crane-2.jpg` | About preview, About hero, Heavy Equipment service |
+| `zoomlion-crane-1.jpg`, `zoomlion-crane-2.jpg` | About preview, About hero, gallery |
 | `barge-waterfront.jpg` | Jetty Space service, Contact hero |
 | `yacht-slipway-crane.jpg` | Vessel Repair service, How We Work |
 | `vessel-hulk-jetty.jpg` | Why Work With Us background, gallery |
 | `drone-video-frame.jpg` | Gallery thumbnail for the drone video |
+| `zoomlion-crane-side.jpg` | Heavy Equipment service, gallery |
+| `zoomlion-crane-rear.jpg` | Gallery |
+| `crane-video-frame.jpg` | Gallery thumbnail for the crane video (`public/videos/crane-lift-yard.mp4`) |
 | `excavator-yard.jpg` | Gallery |
 | `site-yard-containers.jpg` | Gallery |
 | `dismantling-site-1..4.jpg` | Gallery |

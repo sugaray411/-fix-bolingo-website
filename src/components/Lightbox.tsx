@@ -90,7 +90,7 @@ export function Lightbox({ items, index, onClose, onIndexChange }: Props) {
             {item.video ? (
               <video
                 key={item.video}
-                className="max-h-[78vh] w-full bg-black"
+                className="max-h-[78vh] w-auto max-w-full bg-black"
                 src={`${import.meta.env.BASE_URL}${item.video}`}
                 poster={imageSrc(item.image, 1024)}
                 controls

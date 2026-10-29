@@ -45,6 +45,14 @@
     "width": 960,
     "height": 544
   },
+  "crane-video-frame": {
+    "widths": [
+      480,
+      576
+    ],
+    "width": 576,
+    "height": 1024
+  },
   "crawler-crane-breakwater": {
     "widths": [
       480,
@@ -252,5 +260,23 @@
     ],
     "width": 713,
     "height": 535
+  },
+  "zoomlion-crane-rear": {
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "width": 1200,
+    "height": 1600
+  },
+  "zoomlion-crane-side": {
+    "widths": [
+      480,
+      800,
+      1200
+    ],
+    "width": 1200,
+    "height": 1600
   }
 }
