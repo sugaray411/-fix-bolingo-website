@@ -172,6 +172,14 @@
     "width": 1600,
     "height": 900
   },
+  "scrap-yard-video-frame": {
+    "widths": [
+      480,
+      720
+    ],
+    "width": 720,
+    "height": 1280
+  },
   "ship-dismantling-crane": {
     "widths": [
       480,
@@ -189,6 +197,54 @@
     ],
     "width": 1020,
     "height": 765
+  },
+  "trawler-dismantling-closeup": {
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1200
+  },
+  "trawler-dismantling-river": {
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1200
+  },
+  "trawler-video-frame": {
+    "widths": [
+      480,
+      720
+    ],
+    "width": 720,
+    "height": 1280
+  },
+  "trawler-waterfront-crew": {
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1200
+  },
+  "trawler-waterside-wide": {
+    "widths": [
+      480,
+      800,
+      1200,
+      1600
+    ],
+    "width": 1600,
+    "height": 1200
   },
   "vessel-hulk-jetty": {
     "widths": [

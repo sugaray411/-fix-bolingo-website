@@ -25,16 +25,17 @@ function Hero() {
   const onBlocked = useCallback(() => setPlaying(false), []);
 
   return (
-    <section ref={ref} className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-navy pt-28 pb-40 sm:pb-48">
+    <section ref={ref} className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-neutral-900 pt-28 pb-40 sm:pb-48">
       <motion.div style={{ y }} className="absolute inset-0 -z-20 scale-110">
         <HeroVideo playing={playing} onBlocked={onBlocked} />
       </motion.div>
       {/* Lighter on wide screens so the footage reads; text keeps a dark band behind it */}
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/45 lg:from-navy/85 lg:via-navy/45 lg:to-transparent" />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-t from-navy via-transparent to-navy/50" />
-      <div aria-hidden="true" className="bg-grid-dark absolute inset-0 -z-10 opacity-30" />
+      {/* Neutral (not navy) shade, only as much as the text needs, so the footage stays true to colour */}
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-r from-black/60 via-black/35 to-black/10 lg:from-black/55 lg:via-black/20 lg:to-transparent" />
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-black/45 to-transparent" />
+      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-56 bg-gradient-to-t from-black/50 to-transparent" />
 
-      <div className="container-x">
+      <div className="container-x [text-shadow:0_2px_18px_rgb(0_0_0/0.45)]">
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease }} className="eyebrow flex items-center gap-3 text-amber">
           <span aria-hidden="true" className="h-0.5 w-10 bg-amber" />
           Maritime • Industrial • Contracting
@@ -47,7 +48,7 @@ function Hero() {
         >
           Maritime Experience. <span className="text-amber">Practical Solutions.</span> Reliable Delivery.
         </motion.h1>
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25, ease }} className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80 sm:text-xl">
+        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.25, ease }} className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90 sm:text-xl">
           {company.description}
         </motion.p>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4, ease }} className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -213,7 +214,7 @@ function HowWeWork() {
 function WhyUs() {
   return (
     <section className="relative isolate overflow-hidden bg-navy py-24 sm:py-32">
-      <ResponsiveImage name="vessel-hulk-jetty" alt="" intrinsic={false} className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25" />
+      <ResponsiveImage name="trawler-waterfront-crew" alt="" intrinsic={false} className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25" />
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-br from-navy via-navy/95 to-navy/70" />
       <div aria-hidden="true" className="bg-grid-dark absolute inset-0 -z-10" />
       <div className="container-x">

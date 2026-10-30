@@ -49,7 +49,7 @@ export function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled ? "bg-navy/95 shadow-[0_10px_30px_-15px_rgb(0_0_0/0.5)] backdrop-blur-md" : "bg-gradient-to-b from-navy/70 to-transparent",
+        scrolled ? "bg-navy/95 shadow-[0_10px_30px_-15px_rgb(0_0_0/0.5)] backdrop-blur-md" : "bg-gradient-to-b from-black/45 to-transparent",
       )}
     >
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-amber focus:px-4 focus:py-2 focus:text-navy">

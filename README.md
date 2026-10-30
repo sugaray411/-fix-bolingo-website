@@ -31,15 +31,19 @@ Source photos (extracted from the company profile PDF) are in `photos/`:
 | `zoomlion-crane-1.jpg`, `zoomlion-crane-2.jpg` | About preview, About hero, gallery |
 | `barge-waterfront.jpg` | Jetty Space service, Contact hero |
 | `yacht-slipway-crane.jpg` | Vessel Repair service, How We Work |
-| `vessel-hulk-jetty.jpg` | Why Work With Us background, gallery |
+| `vessel-hulk-jetty.jpg` | Gallery |
 | `drone-video-frame.jpg` | Gallery thumbnail for the drone video |
 | `zoomlion-crane-side.jpg` | Heavy Equipment service, gallery |
 | `zoomlion-crane-rear.jpg` | Gallery |
+| `trawler-dismantling-closeup.jpg` | Ship Scrapping service, gallery |
+| `trawler-waterfront-crew.jpg` | Why Work With Us background, gallery |
+| `trawler-dismantling-river.jpg`, `trawler-waterside-wide.jpg` | Gallery |
+| `trawler-video-frame.jpg`, `scrap-yard-video-frame.jpg` | Gallery thumbnails for `trawler-dismantling.mp4` and `scrap-yard-walkthrough.mp4` |
 | `crane-video-frame.jpg` | Gallery thumbnail for the crane video (`public/videos/crane-lift-yard.mp4`) |
 | `excavator-yard.jpg` | Gallery |
 | `site-yard-containers.jpg` | Gallery |
 | `dismantling-site-1..4.jpg` | Gallery |
-| `crane-lifting-deck.jpg` | Ship Scrapping service, gallery |
+| `crane-lifting-deck.jpg` | Gallery |
 | `deck-cutting-crew.jpg` | Marine Cutting service, gallery |
 | `breakwater-causeway.jpg` | Water Supply & General Contracting service, gallery |
 | `scrap-truck-loading.jpg` | Marine Scrap service, gallery |
