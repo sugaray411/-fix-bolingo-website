@@ -95,8 +95,9 @@ form opens the visitor's email app with the enquiry pre-filled.
 
 `npm run build:artifact` builds a copy into `dist-artifact/` with relative
 asset paths, in-memory routing and a map link instead of the embedded map,
-then writes `dist-artifact/artifact.html` for publishing as an Artifact.
-Adding `#about`, `#services`, `#projects` or `#contact` to the link opens
+then writes `dist-artifact/artifact.html`, which is published as the
+Artifact's `index.html` together with the other files in `dist-artifact/`.
+Adding `#about`, `#services`, `#products`, `#projects` or `#contact` to the link opens
 that page.
 
 ## Deploying
