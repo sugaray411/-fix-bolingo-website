@@ -57,6 +57,7 @@ export const nav = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Services", to: "/services" },
+  { label: "Products", to: "/products" },
   { label: "Projects", to: "/projects" },
   { label: "Contact", to: "/contact" },
 ];
@@ -190,6 +191,61 @@ export const services: Service[] = [
     icon: Recycle,
     image: "scrap-truck-loading",
     imageAlt: "Excavator loading recovered steel scrap onto a haulage truck",
+  },
+];
+
+export type Product = {
+  slug: string;
+  name: string;
+  description: string;
+  /** First image is the main photo; any others show as thumbnails. Empty = no photo yet. */
+  images: { image: ImageKey; alt: string }[];
+};
+
+/** Option added to the quote form's service list for product enquiries. */
+export const productEnquiryOption = "Cutting equipment & supplies";
+
+export const productsNote =
+  "Stock, quantities and lead times are confirmed on enquiry. Product names and brands belong to their respective owners.";
+
+export const products: Product[] = [
+  {
+    slug: "exothermic-cutting-rods",
+    name: "Broco Exothermic Cutting Rods",
+    description:
+      "Exothermic (ultrathermic) cutting rods for cutting steel and other metals, underwater or on the surface. Supplied in sealed boxes.",
+    images: [{ image: "product-cutting-rods", alt: "Boxes of Broco Underwater ultrathermic cutting rods with three loose rods" }],
+  },
+  {
+    slug: "br-22-torch",
+    name: "BR-22 Underwater Cutting Torch",
+    description: "Underwater cutting torch for use with exothermic cutting rods, supplied with heavy-duty welding cable.",
+    images: [
+      { image: "product-br22-torch-orange", alt: "Underwater cutting torch with orange handle, cutting rod fitted and welding cable" },
+      { image: "product-br22-torch-grey", alt: "Broco underwater cutting torch with grey handle, cutting rod fitted and welding cable" },
+    ],
+  },
+  {
+    slug: "br-22-plus-torch",
+    name: "BR-22 PLUS Underwater Cutting Torch",
+    description:
+      "Pistol-grip underwater cutting torch with a trigger-operated oxygen valve, supplied with heavy-duty welding cable.",
+    images: [
+      { image: "product-br22-plus", alt: "Orange BR-22 PLUS pistol-grip underwater cutting torch with trigger and welding cable" },
+      { image: "product-br22-plus-kit", alt: "BR-22 PLUS torch with coiled heavy-duty welding cable and blue BR-22 PLUS case" },
+    ],
+  },
+  {
+    slug: "oxygen-regulators",
+    name: "High-Volume Oxygen Regulators",
+    description: "High-volume oxygen regulators for exothermic cutting, which needs a higher oxygen flow than standard gas cutting.",
+    images: [],
+  },
+  {
+    slug: "torch-spare-parts",
+    name: "Cutting Torch Spare Parts & Accessories",
+    description: "Collets, washers and other spare parts and accessories to keep cutting torches in service.",
+    images: [{ image: "product-torch-spare-parts", alt: "Brass torch collet and black rubber washer" }],
   },
 ];
 

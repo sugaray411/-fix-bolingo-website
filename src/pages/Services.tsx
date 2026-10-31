@@ -62,9 +62,16 @@ export default function Services() {
                 </div>
                 <h2 className="mt-6 text-3xl leading-tight font-bold sm:text-4xl">{s.title}</h2>
                 <p className="mt-5 text-lg leading-relaxed">{s.description}</p>
-                <Link to={`/contact?service=${s.slug}#quote`} className={cn(buttonVariants(), "mt-8")}>
-                  Request this service <ArrowRight aria-hidden="true" className="transition-transform group-hover/btn:translate-x-1" />
-                </Link>
+                <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+                  <Link to={`/contact?service=${s.slug}#quote`} className={buttonVariants()}>
+                    Request this service <ArrowRight aria-hidden="true" className="transition-transform group-hover/btn:translate-x-1" />
+                  </Link>
+                  {s.slug === "marine-cutting" && (
+                    <Link to="/products" className={buttonVariants({ variant: "outline-dark" })}>
+                      Cutting equipment we supply
+                    </Link>
+                  )}
+                </div>
               </Reveal>
             </article>
           ))}

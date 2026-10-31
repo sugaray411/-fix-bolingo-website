@@ -2,7 +2,7 @@ import { useEffect, useState, type FormEvent } from "react";
 import { useSearchParams } from "react-router-dom";
 import { toast } from "sonner";
 import { Loader2, Mail, MapPin, Phone, Send } from "lucide-react";
-import { company, services } from "@/data/site";
+import { company, productEnquiryOption, products, services } from "@/data/site";
 import { PageHero } from "@/components/PageHero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
@@ -41,11 +41,17 @@ export default function Contact() {
   const [errors, setErrors] = useState<Errors>({});
   const [submitting, setSubmitting] = useState(false);
 
-  // Pre-fill the service from "Request this service" links
+  // Pre-fill from "Request this service" and product "Request a quote" links
   useEffect(() => {
-    const slug = params.get("service");
-    const match = services.find((s) => s.slug === slug);
-    if (match) setFields((f) => ({ ...f, service: match.title }));
+    const service = services.find((s) => s.slug === params.get("service"));
+    if (service) setFields((f) => ({ ...f, service: service.title }));
+    const product = products.find((p) => p.slug === params.get("product"));
+    if (product)
+      setFields((f) => ({
+        ...f,
+        service: productEnquiryOption,
+        message: f.message || `I'd like a quote for: ${product.name}\nQuantity: `,
+      }));
   }, [params]);
 
   const set = (key: keyof Fields) => (e: { target: { value: string } }) => {
@@ -186,6 +192,7 @@ export default function Contact() {
                     {services.map((s) => (
                       <option key={s.slug} value={s.title}>{s.number} — {s.title}</option>
                     ))}
+                    <option value={productEnquiryOption}>{productEnquiryOption}</option>
                   </NativeSelect>
                   {err("service")}
                 </div>

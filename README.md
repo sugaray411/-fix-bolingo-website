@@ -59,6 +59,16 @@ To replace or add a photo, drop a `.jpg` into `photos/` and run
 page's hero image, update the matching entry in the preload script in
 `index.html`.
 
+## Products
+
+The Products page (`/products`) lists the cutting equipment the company
+supplies. Edit `products` in `src/data/site.ts`: each product can have
+several photos (the first is the main one; the rest show as thumbnails) or
+none, which shows a "Photo coming soon" tile. Product photos are
+`photos/product-*.jpg`. Each "Request a quote" button opens the quote form
+with "Cutting equipment & supplies" selected and the product named in the
+message.
+
 ## Hero video
 
 The home page opens on `public/videos/hero-wreck-removal.mp4` (aerial drone

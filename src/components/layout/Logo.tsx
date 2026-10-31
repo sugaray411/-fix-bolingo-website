@@ -11,7 +11,7 @@ export function Logo({ className, onClick }: { className?: string; onClick?: () 
       </span>
       <span className="leading-none">
         <span className="block font-display text-xl font-bold tracking-[0.08em] text-white">FIX BOLINGO</span>
-        <span className="mt-1 block text-[10px] font-medium tracking-[0.24em] text-white/70 uppercase">International Limited</span>
+        <span className="mt-1 block text-[10px] font-medium tracking-[0.24em] whitespace-nowrap text-white/70 uppercase">International Limited</span>
       </span>
     </Link>
   );

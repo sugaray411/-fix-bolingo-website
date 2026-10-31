@@ -168,6 +168,15 @@ function ServicesGrid() {
             </Reveal>
           ))}
         </ul>
+        <Reveal className="mt-8 flex flex-col gap-4 border border-navy/10 bg-offwhite px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-[15px]">
+            <span className="font-display font-semibold text-navy">We also supply cutting equipment:</span> Broco exothermic cutting rods,
+            BR-22 and BR-22 PLUS underwater cutting torches, oxygen regulators and spare parts.
+          </p>
+          <Link to="/products" className={cn(buttonVariants({ variant: "navy", size: "sm" }), "shrink-0")}>
+            View products <ArrowRight aria-hidden="true" />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );

@@ -134,6 +134,56 @@
     "width": 960,
     "height": 544
   },
+  "product-br22-plus-kit": {
+    "widths": [
+      480,
+      700
+    ],
+    "width": 700,
+    "height": 700
+  },
+  "product-br22-plus": {
+    "widths": [
+      480,
+      800,
+      1000
+    ],
+    "width": 1000,
+    "height": 1000
+  },
+  "product-br22-torch-grey": {
+    "widths": [
+      480,
+      800
+    ],
+    "width": 800,
+    "height": 600
+  },
+  "product-br22-torch-orange": {
+    "widths": [
+      480,
+      800
+    ],
+    "width": 800,
+    "height": 600
+  },
+  "product-cutting-rods": {
+    "widths": [
+      480,
+      600
+    ],
+    "width": 600,
+    "height": 600
+  },
+  "product-torch-spare-parts": {
+    "widths": [
+      480,
+      800,
+      1000
+    ],
+    "width": 1000,
+    "height": 1000
+  },
   "scrap-haulage-seafront": {
     "widths": [
       480,

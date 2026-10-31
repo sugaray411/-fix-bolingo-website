@@ -66,8 +66,8 @@ export function Header() {
                   end={item.to === "/"}
                   className={({ isActive }) =>
                     cn(
-                      "relative px-4 py-2 font-display text-sm font-medium tracking-wide text-white/85 uppercase transition-colors hover:text-white",
-                      "after:absolute after:inset-x-4 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-amber after:transition-transform hover:after:scale-x-100",
+                      "relative px-2.5 py-2 font-display text-sm font-medium tracking-wide text-white/85 uppercase transition-colors hover:text-white xl:px-4",
+                      "after:absolute after:inset-x-2.5 xl:after:inset-x-4 after:-bottom-0.5 after:h-0.5 after:origin-left after:scale-x-0 after:bg-amber after:transition-transform hover:after:scale-x-100",
                       isActive && "text-white after:scale-x-100",
                     )
                   }
