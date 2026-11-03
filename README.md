@@ -103,6 +103,18 @@ that page.
 ## Deploying
 
 `npm run build` outputs a static site in `dist/`. SPA fallbacks are included
-for Netlify (`public/_redirects`) and Vercel (`vercel.json`). Once the
+for Apache/GoDaddy (`public/.htaccess`), Netlify (`public/_redirects`) and
+Vercel (`vercel.json`).
+
+### GoDaddy (cPanel web hosting)
+
+1. `npm run build`, then zip the *contents* of `dist/` (not the folder itself):
+   `cd dist && zip -r ../deploy/fix-bolingo-godaddy.zip . -x _redirects`
+2. In GoDaddy: My Products → Web Hosting → Manage → cPanel Admin → File Manager.
+3. Open `public_html`, upload the zip, then right-click it → Extract.
+   Delete the zip and any old placeholder `index.html`/`default.html` first.
+4. In File Manager → Settings, tick "Show Hidden Files" and check `.htaccess`
+   is there (it makes /about, /products etc. work on refresh and forces HTTPS).
+5. cPanel → SSL/TLS Status → Run AutoSSL, so https:// works. Once the
 domain is known, make the `og:image` URL in `index.html` absolute and add a
 sitemap.
