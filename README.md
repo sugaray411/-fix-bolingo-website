@@ -106,6 +106,17 @@ that page.
 for Apache/GoDaddy (`public/.htaccess`), Netlify (`public/_redirects`) and
 Vercel (`vercel.json`).
 
+### Vercel with a GoDaddy domain
+
+1. vercel.com → Add New → Project → import `sugaray411/-fix-bolingo-website`.
+   Settings come from `vercel.json`; name the project `fix-bolingo-website`.
+   Optionally add the `VITE_WEB3FORMS_KEY` environment variable. Deploy.
+2. Project → Settings → Domains → add `yourdomain.com` and `www.yourdomain.com`.
+3. In GoDaddy → Domain → DNS, set the records Vercel shows (usually an `A`
+   record for `@` and a `CNAME` for `www`), deleting any old `A @` record
+   (e.g. "Parked") first. Vercel issues HTTPS once DNS has updated.
+4. Every push to `main` redeploys automatically.
+
 ### GoDaddy (cPanel web hosting)
 
 1. `npm run build`, then zip the *contents* of `dist/` (not the folder itself):
